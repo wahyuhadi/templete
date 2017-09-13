@@ -1,0 +1,149 @@
+%!TEX root = ./template-skripsi.tex
+%-------------------------------------------------------------------------------
+% 								BAB I
+% 							LATAR BELAKANG
+%-------------------------------------------------------------------------------
+
+\chapter{LATAR BELAKANG}
+
+\section{Latar Belakang Masalah}
+Dalam perkembangan teknologi yang semakin pesat, kebutuhan akan keaman-
+an jaringan tentunya meningkat seiring dengan berkembangnya ilmu pengetahuan
+tentang masalah \emph{hacking} dan \emph{cracking} yang bersifat \emph{free} dan ada pula yang diko-
+mersilkan. Kemudian dari sisi \emph{software} pendukung pun sudah banyak \emph{tools} yang
+bersifat \emph{free} yang kemampuannya sudah bisa dikatakan mumpuni untuk digunakan
+sebagai alat penyerangan oleh kalangan \emph{attacker}.
+
+Pada sisi lain timbul masalah serius yaitu faktor keamanannya, namun disatu
+sisi manusia sudah sangat tergantung dengan sistem informasi. Hal itu yang me-
+nyebabkan statistik insiden keamanan jaringan terus meningkat tajam dari tahun ke
+tahun. Ini disebabkan karena kepedulian masyarakat yang sangat kurang terhadap
+sistem keamanan jaringan
+
+Keamanan jaringan lokal ini bergantung sepenuhnya terhadap bagaimana se-
+orang \emph{network administrator} merespon dengan cepat sebuah serangan yang terjadi.
+Tapi \emph{network administrator} hanyalah seorang manusia yang terbatas akan waktu. Se-
+orang \emph{network administrator} tidak dapat mengawasi seluruh jaringan secara terus-
+menerus. Maka dari itu dibutuhkan sebuah sistem yang dapat membantu \emph{network
+administrator} untuk digunakan sebagai mengetasi segala macam serangan.
+Pada permasalahan tersebut, pada penelitian ini akan dibuat sebuah aplikasi
+yang dapat membantu \emph{network administrator} dalam \emph{memonitoring server}, aplikasi ini
+bertujuan untuk mempermudah \emph{network administrator} dalam mengamankan \emph{server}
+dari berbagai macam jenis serangan \emph{(ddos, scaning , brute force)}.
+ 
+Selain itu aplikasi ini terhubung dengan fitur bot yang dimiliki oleh aplika-
+si \emph{chat} telegram, yang berfungsi sebagai \emph{command and control} pada server. Setiap
+serangan yang terdeteksi akan dikirim melalui telegram, sehingga \emph{network adminis-
+trator} dapat mengetahui serangan apa saja yang terjadi pada \emph{server} ditambah dengan
+fitur bot dari telegram yang berfungsi sebagai \emph{command and control} yang digunakan
+untuk memerintah \emph{server} untuk melakukan pencegahan / \emph{bloking}.
+
+\section{Rumusan Masalah}
+Dalam perkembangan teknologi sekarang yang sudah semakin pesat, kebu-
+tuhan akan keamanan jaringan tentunya meningkat seiring dengan berkembangnya
+ilmu pengetahuan tentang masalah \emph{hacking} dan \emph{cracking} yang bersifat free dan ada
+pula yang dikomersilkan. Kemudian dari sisi software pendukung pun sudah banyak
+tool-tool yang bersifat free yang kemampuannya sudah bisa dikatakan mumpuni un-
+tuk digunakan sebagai alat penyerangan oleh kalangan attacker. Serangan-serangan
+tersebut dapat melumpuhkan server. Sehingga dapat menimbulkan kerugian.
+
+
+\section{Batasan Masalah}
+Batasan masalah pada penelitian ini adalah:
+\begin{enumerate}
+\item Membutuhkan kapasitas memori yang cukup besar.
+\item Berjalan sistem operasi linux .
+\item Hanya bisa melakukan monitoring pada satu \emph{interface network} saja..
+\item Hanya mendeteksi serangan (DDoS, Scanning, Brute Force)
+\end{enumerate}
+
+\section{Hipotesis}
+Dengan menggunakan rule deteksi yang didapatkan dengan pengolahan data-
+sheet akan ditemukan fitur serangan yang mempunyai ciri-ciri masing-masing dalam
+jenis serangan, hal ini akan mempermudah dalam melakukan deteksi serangan ter-
+sebut, dikarenakan semua jenis serangan akan dibedakan dari masing masing fitur
+serangan yang telah ditentukan. Dalam mendeteksi serangan diharapkan sekurang-kurangnya 70\% 
+
+
+\section{Tujuan Penelitian}
+Tujuan dari penelitian tugas akhir ini adalah membuat sebuah aplikasi yang digunakan untuk membantu \emph{sysadmin} dalam memonitoring serangan-serangan yang terjadi pada \emph{server}, baik dalam proses pencegahan dan pendektesian terhadap serangan yang mempu membahayakan \emph{server}.
+
+
+
+\section{Metode Penyelesain Masalah}
+
+Metode penelitian yang digunakan:
+\begin{enumerate}
+
+\item  STUDI LITERATUR. \newline
+Melakukan pencarian refrensi mengenai telegram bot dan pengolahan data tra-
+fik jaringan berdasarkan serangan yang diperlukan.
+
+\item PENGUMPULAN DATA. \newline
+Pada tahap ini, dilakukan pengumpulan data training yang akan diolah meng-
+gunakan algoritma Decision Tree. Data training dikumpulkan menggunakan
+scapy. Data Training pada serangan DDoS, Brute Force dan Scanning masing-
+masing berjumlah 5 juta data.
+
+\item PERANCANGAN KEBUTUHAN SISTEM. \newline
+Melakukan perancangan sistem deteksi untuk mendeteksi serangan DDoS, Bru-
+te Force dan Scanning serta dapat di integrasikan terhadap library scapy
+
+
+\item PENGUJIAN SISTEM. \newline
+Pada tahap ini sistem yang telah dibangun akan diuji berdasarkan hasil analisa
+dari algoritma decision tree yang menghasilkan fitur dan rules serangan..Hasil
+dari pengujian tersebut, diantaranya adalah kemampuan sistem untuk mengha-
+silkan tree berdasarkan jumlah data training yang ditentukan dan kemampuan
+sistem untuk mendeteksi serangan berdasarkan fitur dan rules serangan yang di
+inputkan kedalam sistem deteksi.
+
+\item ANALISA HASIL PENGUJIAN. \newline
+Pada tahap analisis hasil pengujian, dilakukan perbandingan trafik serangan
+terhadap jumlah keseluruhan trafik. Hasil dari analisis tersebut, diantaranya
+adalah akurasi untuk mendeteksi serangan.
+
+\item PENYUSUNAN LAPORAN TUGAS AKHIR. \newline
+Pada tahap ini semua data dan hasil dari penelitian akan dibuat menjadi sebuah
+laporan dengan sistematika penulisan yang sesuai dengan ketentuan institusi.
+
+\end{enumerate}
+\newpage
+\section{Sistematika Penulisan}
+\noindent
+\textbf{BAB I : PENDAHULUAN}
+
+Pada bab ini dijelaskan latar belakang, rumusan masalah, batasan, tujuan,
+manfaat, keaslian penelitian, dan sistematika penulisan.\\
+
+
+\noindent
+\textbf{BAB II : TINJAUAN PUSTAKA DAN LANDASAN TEORI}
+
+Pada bab ini dijelaskan teori-teori dan penelitian terdahulu yang digunakan
+sebagai acuan dan dasar dalam penelitian.\\
+
+\noindent
+\textbf{BAB III : METODOLOGI PENELITIAN}
+
+Pada bab ini dijelaskan metode yang digunakan dalam penelitian meliputi
+langkah kerja, pertanyaan penilitian, alat dan bahan, serta tahapan dan alur penelitian.\\
+
+\noindent
+\textbf{BAB IV : HASIL DAN PEMBAHASAN}
+
+Pada bab ini dijelaskan hasil penelitian dan pembahasannya.\\
+
+\noindent
+\textbf{BAB V : KESIMPULAN DAN SARAN}
+
+Pada bab ini ditulis kesimpulan akhir dari penelitian dan saran untuk pengem-
+bangan penelitian selanjutnya.\\
+
+
+% Baris ini digunakan untuk membantu dalam melakukan sitasi
+% Karena diapit dengan comment, maka baris ini akan diabaikan
+% oleh compiler LaTeX.
+\begin{comment}
+\bibliography{daftar-pustaka}
+\end{comment}

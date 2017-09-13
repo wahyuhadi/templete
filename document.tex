@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper,sans,french]{moderncv}        % autres options possibles : taille de fonte ('10pt', '11pt' et '12pt'), format de papier ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') et famille de fonte ('sans' and 'roman')
+\moderncvstyle{casual}                             % autres styles : 'casual' (défaut), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % autres couleurs : 'blue' (défaut), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\nopagenumbers{}                                  % décommenter pour supprimer la numérotation automatique des pages pour les CVs de plus d'une page
+\usepackage[utf8]{inputenc}                       % si vous n'utilisez pas xelatex ou lualatex, remplacer par le codage d'entrée que vous utilisez
+\usepackage[scale=0.75,a4paper]{geometry}
+\usepackage{babel}
+%----------------------------------------------------------------------------------
+%            informations personnelles
+%----------------------------------------------------------------------------------
+\firstname{Prénom}
+\familyname{Nom}
+\title{Titre du CV}                               % optionnel : supprimer ou commenter si non souhaité
+\address{Numéro et rue}{Code postal et ville}{Pays} % optionnel : supprimer ou commenter si non souhaité; l'argument « Pays » peut être omis ou vide
+\mobile{Numéro de portable}                          % optionnel : supprimer ou commenter si non souhaité
+\phone{Numéro de téléphone}                           % optionnel : supprimer ou commenter si non souhaité
+\fax{Numéro de fax}                             % optionnel : supprimer ou commenter si non souhaité
+\email{Courriel}                               % optionnel : supprimer ou commenter si non souhaité
+\homepage{Page Web personnelle}                         % optionnel : supprimer ou commenter si non souhaité
+\extrainfo{Information supplémentaire}                 % optionnel : supprimer ou commenter si non souhaité
+% \photo[64pt][0.4pt]{Image} % optionnel : décommenter si souhaité ; '64pt' est un exemple de hauteur que doit avoir la photo, 0.4pt est un exemple d'épaisseur que doit avoir le cadre qui l'entoure (à mettre à 0pt pour supprimer le cadre) et « Image » est le nom du fichier de la photo
+\quote{Citation}                                 % optionnel : supprimer ou commenter si non souhaité
+%
+\begin{document}
+\makecvtitle
+\section{Formation}
+\cventry{Année--Année}{Diplôme}{École}{Ville}{Mention}{Description}                      % les arguments 3 à 6 peuvent être laissés vides
+\cventry{Année--Année}{Diplôme}{École}{Ville}{Mention}{Description}
+\section{Expérience}
+\subsection{Principale}
+\cventry{Année--Année}{Emploi}{Employeur}{Ville}{}{Description générale d'au plus 1 ou 2 lignes}
+\cventry{Année--Année}{Emploi}{Employeur}{Ville}{}{Description générale d'au plus 1 ou 2 lignes}
+\subsection{Divers}
+\cventry{Année--Année}{Emploi}{Employeur}{Ville}{}{Description générale d'au plus 1 ou 2 lignes}
+\section{Langues}
+\cvitemwithcomment{Langue 1}{Niveau}{Commentaire}
+\cvitemwithcomment{Langue 2}{Niveau}{Commentaire}
+\cvitemwithcomment{Langue 3}{Niveau}{Commentaire}
+\section{Compétences informatiques}
+\cvdoubleitem{Catégorie 1}{Commentaire}{Catégorie 4}{Commentaire}
+\cvdoubleitem{Catégorie 2}{Commentaire}{Catégorie 5}{Commentaire}
+\cvdoubleitem{Catégorie 3}{Commentaire}{Catégorie 6}{Commentaire}
+\section{Centres d'intérêt}
+\cvitem{Loisir 1}{Description}
+\cvitem{Loisir 2}{Description}
+\cvitem{Loisir 3}{Description}
+\section{Extra 1}
+\cvlistitem{Item 1}
+\cvlistitem{Item 2}
+\cvlistitem{Item 3}
+\section{Extra 2}
+\cvlistdoubleitem{Item 1}{Item 4}
+\cvlistdoubleitem{Item 2}{Item 5}
+\cvlistdoubleitem{Item 3}{Item 6}
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{Catégorie 1}{Commentaire}
+  \cvcolumn{Catégorie 2}{Commentaire}
+  \cvcolumn{Catégorie 3}{Commentaire}
+\end{cvcolumns}
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{DRH de l'entreprise}{Nom de l'entreprise\\Numéro et rue\\Code postal et ville}
+\date{Date}
+\opening{Chère madame, cher monsieur,}
+\closing{Veuillez agréer,}
+\enclosure{Pièces jointes}          %  utiliser l'argument optionnel pour spécifier un autre mot que "Enclosure", ou redéfinir \enclname
+\makelettertitle
+\makeletterclosing
+\end{document}

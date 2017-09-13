@@ -1,0 +1,118 @@
+%!TEX root = ./template-skripsi.tex
+%-------------------------------------------------------------------------------
+%                            BAB II
+%               TINJAUAN PUSTAKA DAN DASAR TEORI
+%-------------------------------------------------------------------------------
+
+\chapter{TINJAUAN PUSTAKA DAN DASAR TEORI}                
+
+\section{Telegram Bot}
+Telegram adalah aplikasi pesan chatting yang memungkinkan pengguna untuk
+mengirimkan pesan chatting rahasia yang dienkripsi end-to-end sebagai keamanan
+tambahan. Selain itu telegram dilengkapi dengan fitur bot yang bersifat open source
+yang dimana fitur ini sangat cocok digunakan dalam penelitian ini. pada penelitian
+ini penulis menggunakan aplikasi telegram dikarenakan fitur bot telegram bisa digu-
+nakan sebagai \emph{Command and Control (CNC)} pada \emph{server} , baik \emph{memonitoring server}
+, monitoring serangan. Namun pada penelitian ini bot difungsikan sebagai Command
+and Control pada server yaitu jika terjadi serangan apakah alamat ipaddres yang ter-
+deteksi akan di blok atau tidak. Sehingga sysadmin tidak perlu melakukan remote
+server untuk itu[2].
+
+\section {\emph{Intrusion Detection System (IDS)}}
+Menurut Chris Brenton (2003:289), Intrusion Detection System (IDS) ada-
+lah sistem pendeteksian penyusupan yang dapat melakukan scanning log-log access
+dan menganalisis karakteristik-karakteristik dari file-file untuk mengetahui apakah fi-
+le tersebut telah diserang. Intrusion Detection System mampu mendeteksi aktivitas
+yang mencurigakan dalam sebuah sistem atau jaringan.[1]
+
+\indent
+\subsection {\emph {Network Intrusion Detection System (\emph{NIDS})}}
+\emph{Network Intrusion Detection System} adalah sistem pendeteksian penyusupan
+\emph{network}. \emph{network Intrusion Detection System} memiliki fungsi untuk menganalisis
+paket di sebuah \emph{network} dan mencoba untuk menentukan apakah seorang cracker
+sedang mencoba untuk masuk ke dalam sebuah sistem atau menyebabkan sebuah
+serangan Denial of Service (DOS)[2].
+
+\subsection{\emph{Host Intrusion Detection System (\emph{HIDS})}}
+\emph{Host Intrusion Detection System} adalah sistem pendeteksian penyusupan host.
+Sama seperti \emph{NIDS}, sebuah \emph{HIDS} menganalisis lalu lintas \emph{network} yang dikirimkan
+menuju dan dari sebuah mesin tunggal. Sebagian besar dari \emph{NIDS} komersial saat ini
+biasanya memiliki suatu unsur \emph{HIDS}, dan sistem-sistem ini disebut hybrid IDS[2].
+
+\subsection{\emph{System Integrity Verifier (SIV)}}
+\emph{System Integrity Verifier} adalah alat untuk verifikasi integritas sistem. Melacak
+file-file sistem yang kritikal dan memberitahukan kepada administrator pada saat file-
+file tersebut diubah (biasanya oleh seorang cracker yang mencoba untuk mengganti
+file yang valid dengan sebuah Trojan Horse). Contoh dari SIV adalah Tripwire[3].
+
+\subsection{\emph{Log File Monitor (LFM)}}
+Log File Monitor adalah alat yang digunakan untuk membaca log-log yang
+dihasilkan oleh servis- servis \emph{network} yang mencari pola-pola serangan. Contoh dari
+LFM adalah Swatch[3].
+
+\section{\emph{Distributed Denial of Service (DDoS)}}
+Rui Zhong et al.[4] \emph{Distributed Denial of Service (DDoS)} adalah jenis se-
+rangan yang dilakukan secara masif dengan tujuan mengganggu hak akses pengguna
+jaringan. DDoS merupakan serangan flooding trafik yang dilakukan dengan sengaja
+untuk mengganggu QoS dari sistem jaringan yang bertujuan untuk membuat sumber
+daya server habis. Serangan DDoS pada dasarnya sama dengan serangan DoS namun
+serangan dilakukan dengan banyak sumber secara serentak. Untuk melancarkan se-
+rangan DDoS, penyerang biasanya mengumpulkan pasukan dengan cara mengambil
+alih komputer-komputer yang kemudian dijadikan zombie yang merupakan komputer
+yang siap diperintah dan dikendalikan oleh botnet[2].
+
+\newpage 
+\section{\emph{Brute Force Attack}}
+\emph{Brute Force attack} adalah serangan pada protokol jaringan yang bertujuan un-
+tuk mendapat hak akses penuh dengan cara melakukan kegiatan penebakan username
+dan password login dari sebuah service dengan menggunakan kombinasi username
+dan password yang berbeda[4] 
+
+
+\section{\emph{Scanning}}
+\emph{Scanning Attack} adalah serangan yang bertujuan pada jaringan yang bertujuan
+untuk menemukan port ataupun service yang terdapat pada sebuah host yang sedang
+tersambung kedalam jaringan[5].Berikut akan dijelaskan macam-macam serangan
+scanning:
+
+\subsection{\emph{Host Discovery}}
+Serangan \emph{Host Discovery} adalah jenis serangan scaning yang digunakan untuk
+mengetahui junmlah host yang sedang aktip pada suatu jaringan[5]. Jenis serangan
+ini mengirimkan packet icmp kesetiap alamat subnet pada sebauh jaringan.
+
+
+\subsection{\emph{Port Detections}}
+Jenis serangan scanning ini bertujuan untuk mengetahui port-port yang sedang
+terbuka pada sebuah host yang telah ditentukan. Untuk menemukan port yang terbu-
+ka serangan ini melakukan pengiriman paket tcp terhadap host yang sedanga aktip
+dengan menargetkan port 1-65536.
+
+\subsection{\emph{Service Scanning}}
+Jenis serangan scanning ini adalah serangan yang akan mengetahui macam
+macam service yang berjalan pada sebuah host yang menjalankan port tertentu.Serangan
+ini melakukan scanning pada masing-masing port yang sedang berjalan dan akan me-
+lakukan penyamaan signature pada software yang menjalankan port tersebut[5].
+
+\newpage
+\subsection{\emph{Host Detection}}
+Serangan scanning ini bertujuan untuk mengetahui jenis sistem operasi yang
+dijalankan. Serangan ini menargetkan port 443 (netbios) yang mempunyai signature
+(ciri-ciri) tiap masing-masing host[6].
+
+\subsection{\emph{Scapy}}
+Scapy adalah suatu library yang dibangun menggunakan bahasa pemrogram-
+an python dan sangat powerfull untuk memanipulasi paket yang ada pada jaringan.
+Scapy mampu membuat dan memecah paket-paket dari berbagai jenis protocol yang
+ada, mentransimikannya, menangkapnya, menerima permintaan dan menjawabnya,
+dan banyak lagi. Scapy dapat digunakan untuk menangani macam-macam kegiat-
+an yang berhubungan dengan \emph{network}ing, seperti kegiatan "scanning","tracerouting",
+"attack" atau "\emph{network} discovery". Scapy juga dapat mengajarkan kita tentang semua
+proses-proses dari suatu protocol.
+
+
+% Baris ini digunakan untuk membantu dalam melakukan sitasi
+% Karena diapit dengan comment, maka baris ini akan diabaikan
+% oleh compiler LaTeX.
+\begin{comment}
+\bibliography{daftar-pustaka}
+\end{comment}

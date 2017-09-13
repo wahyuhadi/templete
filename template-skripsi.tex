@@ -1,0 +1,182 @@
+
+%Template pembuatan naskah skripsi.
+\documentclass{jtetiskripsi}
+\usepackage{geometry}
+\usepackage{kantlipsum}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\fancyhf{} % clear all header and footers
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\fancyfoot[RO]{\thepage} % Left side on Even pages; Right side on Odd pages
+\pagestyle{fancy}
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	\renewcommand{\headrulewidth}{0pt}%
+	\fancyhf[rof]{\thepage}%
+}
+%Untuk prefiks pada daftar gambar dan tabel
+\usepackage[titles]{tocloft}
+\renewcommand\cftfigpresnum{Gambar\  }
+\renewcommand\cfttabpresnum{Tabel \   }
+
+%Untuk hyperlink dan table of content
+\usepackage{hyperref}
+\newlength{\mylenf}
+\settowidth{\mylenf}{\cftfigpresnum}
+\setlength{\cftfignumwidth}{\dimexpr\mylenf+2em}
+\setlength{\cfttabnumwidth}{\dimexpr\mylenf+2em}
+
+%Untuk Bold Face pada Keterangan Gambar
+\usepackage[labelfont=bf]{caption}
+
+%Untuk caption dan subcaption
+\usepackage[labelsep=none]{caption}
+\usepackage{subcaption}
+
+
+%-----------------------------------------------------------------
+%Disini awal masukan untuk data proposal skripsi
+%-----------------------------------------------------------------
+
+
+
+%-----------------------------------------------------------------
+%Disini akhir masukan untuk data proposal skripsi
+%-----------------------------------------------------------------
+
+
+\begin{document}
+
+\cover
+
+\approvalpage
+
+%-----------------------------------------------------------------
+%Disini awal masukan Acknowledment
+%-----------------------------------------------------------------
+\acknowledgment
+\begin{flushright}
+\emph{Untuk Ibu, Bapak,\\dan Adik-adikku tercinta.}
+\end{flushright}
+
+%-----------------------------------------------------------------
+%Disini awal masukan untuk Prakata
+%-----------------------------------------------------------------
+\preface
+Assalamu'alaikum Wr. Wb.
+
+\vspace{0.5cm}
+
+Puji syukur penulis panjatkan ke hadirat Allah SWT karena hanya dengan rahmat dan hidayah-Nya, Tugas Akhir ini dapat terselesaikan tanpa halangan berarti. Keberhasilan dalam menyusun laporan Tugas Akhir ini tidak lepas dari bantuan berbagai pihak yang mana dengan tulus dan ikhlas memberikan masukan guna sempurnanya Tugas Akhir ini. Oleh karena itu dalam kesempatan ini, dengan kerendahan hati penulis mengucapkan terima kasih kepada:
+
+\begin{enumerate}
+
+\item{Bapak Surya Michrandi Nasution, S.T., M.T Selaku Dosen Pembimbing pertama saya, dan sebagai KK Seculab }
+\item{Bapak Fairuz Azmi, S.T., M.T Selaku Dosen Pembimbing kedua saya }
+\item {Bapak Ir. Burhanuddin Dirgantoro ,M.T Selaku Dosen Wali saya}
+\item{Temen-temen kelas SK-37-04 yang selalu membuat saya tertawa dengan humornya}
+
+\item{Dan Teman-teman yang masih banyak yang tidak mungkin saya sebutkan}
+
+\end{enumerate}
+
+Penulis menyadari bahwa penyusunan Tugas Akhir ini jauh dari sempurna.Akhir kata penulis mohon maaf yang sebesar-besarnya apabila ada kekeliruan di dalam penulisan Tugas Akhir ini.
+
+\vspace{0.5cm}
+
+Wassalamu'alaikum Wr. Wb.
+
+\begin{tabular}{p{7.5cm}c}
+&Bandung, 28 Juni 2017\\
+&\\
+&\\
+&\textbf{Penulis}
+\end{tabular}
+
+%-----------------------------------------------------------------
+%Disini akhir masukan untuk muka skripsi
+%-----------------------------------------------------------------
+\tableofcontents
+\addcontentsline{toc}{chapter}{DAFTAR ISI}
+\listoftables
+\addcontentsline{toc}{chapter}{DAFTAR TABEL}
+\listoffigures
+\addcontentsline{toc}{chapter}{DAFTAR GAMBAR}
+
+%-----------------------------------------------------------------
+%Daftar Singkatan [Optional]
+%-----------------------------------------------------------------
+
+%-----------------------------------------------------------------
+%Disini awal masukan Intisari
+%-----------------------------------------------------------------
+\begin{abstractind}
+Dalam perkembangan teknologi sekarang yang sudah semakin pesat, kebutuhan akan keamanan jaringan tentunya meningkat seiring dengan berkembangnya
+ilmu pengetahuan tentang masalah hacking dan cracking yang bersifat free dan ada
+pula yang dikomersilkan. Kemudian dari sisi software pendukung pun sudah banyak
+tool-tool yang bersifat free yang kemampuannya sudah bisa dikatakan mumpuni untuk digunakan sebagai alat penyerangan oleh kalangan attacker.
+
+Pada sisi lain timbul masalah serius yaitu faktor keamanannya, namun disatu
+sisi manusia sudah sangat tergantung dengan sistem informasi. Hal itu yang menyebabkan statistik insiden keamanan jaringan terus meningkat tajam dari tahun ke tahun.
+Ini disebabkan karena kepedulian masyarakat yang sangat kurang terhadap sistem
+keamanan jaringan.
+
+
+Pada permasalahan tersebut, pada penelitian ini akan dibuat sebuah aplikasi
+yang dapat membantu network administrator dalam memonitoring server, aplikasi ini
+bertujuan untuk mempermudah network administrator dalam mengamankan server
+dari berbagai macam jenis serangan (ddos, scaning , brute force)
+
+\bigskip
+\noindent
+\textbf{Kata kunci :} \emph{TelegramBot, attacker , server, ddos , scanning , brute force}
+\end{abstractind}
+
+\begin{abstracteng}
+\emph { In today's rapidly growing technological developments, the need for network security certainly increases with the development of knowledge about hacking and cracking problems that are free and some are commercialized. Then from the side of the software support is already a lot of tool tools that are free of which ability can be said to be used as a means of attack by attackers.}
+ 
+\emph{ On the other hand there is a serious problem that is the security factor, but on the one hand humans are very dependent with the information system. This is what causes the statistics of network security incidents continue to increase sharply from year to year. This is due to the people's awareness which is very less towards Network security system.}
+ 
+\emph{ In this research, we will create an application that can help network administrator in monitoring server, this application is aimed to facilitate network administrator in securing server from various kinds of attack (ddos, scaning, brute force) }
+ 
+\bigskip
+\noindent
+\textbf{\emph{Keywords :}} \emph{wireless sensor network, Internet Protokol, WiFi, interoperability}.
+\end{abstracteng}
+%-----------------------------------------------------------------
+%Disini akhir masukan Intisari
+%-----------------------------------------------------------------
+
+%-----------------------------------------------------------------
+%Disini awal masukan untuk Bab
+%-----------------------------------------------------------------
+\include{bab1}
+
+\include{bab2}
+
+\include{bab3}
+
+\include{bab4}
+
+\include{bab5}
+
+%-----------------------------------------------------------------
+%Disini akhir masukan Bab
+%-----------------------------------------------------------------
+
+
+%-----------------------------------------------------------------
+% Disini awal masukan untuk Daftar Pustaka
+% - Daftar pustaka diambil dari file .bib yang ada pada folder ini
+%   juga.
+% - Untuk memudahkan dalam memanajemen dan menggenerate file .bib
+%   gunakan reference manager seperti Mendeley, Zotero, EndNote,
+%   dll.
+%-----------------------------------------------------------------
+\bibliography{IEEEabrv,daftar-pustaka}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+%-----------------------------------------------------------------
+%Disini akhir masukan Daftar Pustaka
+%-----------------------------------------------------------------
+
+\end{document}
